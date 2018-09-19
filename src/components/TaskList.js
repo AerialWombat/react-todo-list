@@ -2,20 +2,21 @@ import React from 'react';
 
 const TaskList = ({ tasks }) => {
     return (
-        <div>
-            {
-                tasks.map((task, i) => {
-                    return (
-                        <div >
-                            <p>{tasks[i]}</p>
-                            <input
-                                type='checkbox'
-                            />
-                        </div>
-                    )
-                })
-            }
-        </div>
+        <form className='pa4'>
+            <fieldset id='Tasks' className='bn'>
+                <legend class='fw7 mb2'>Todo-List</legend>
+                {
+                    tasks.map((task, i) => {
+                        return (
+                            <div>
+                                <input class='mr2' type='checkbox' id={tasks[i]} value={tasks[i]}/>
+                                <label for={tasks[i]} class='1h-copy'>{tasks[i]}</label>
+                            </div>
+                        )
+                    })
+                }
+            </fieldset>
+        </form>
     )
 }
 
