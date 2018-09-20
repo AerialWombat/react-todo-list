@@ -11,6 +11,9 @@ class App extends Component {
     }
   }
 
+  // Event handler for submitting new tasks
+  // Copies state array, adds the new item, and then sets the state to the updated array
+  // Prevents page refresh and clears input element
   onAddSubmit = (event) => {
     event.preventDefault();
     const tasksBuffer = this.state.tasks.slice();
@@ -19,12 +22,16 @@ class App extends Component {
     event.target.task.value = '';
   }
 
+  onTaskClick = (event) => {
+    console.log(event.target.getAttribute('data-key'));
+  } 
+
   render() {
-    console.log(this.state.tasks);
+    // console.log(this.state.tasks);
     return (
       <div>
         <AddBar addSubmit={ this.onAddSubmit }/>
-        <TaskList tasks={ this.state.tasks }/>
+        <TaskList taskClick={ this.onTaskClick } tasks={ this.state.tasks }/>
       </div>
     );
   }

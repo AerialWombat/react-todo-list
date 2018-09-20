@@ -1,17 +1,19 @@
 import React from 'react';
+import Task from './Task';
 
-const TaskList = ({ tasks }) => {
+const TaskList = ({ taskClick, tasks }) => {
     return (
-        <form className='pa4'>
+        <form className='pa4 center measure'>
             <fieldset id='Tasks' className='bn'>
                 <legend class='fw7 mb2'>Todo-List</legend>
                 {
-                    tasks.map((task, i) => {
+                    tasks.map((task, index) => {
                         return (
-                            <div>
-                                <input class='mr2' type='checkbox' id={tasks[i]} value={tasks[i]}/>
-                                <label for={tasks[i]} class='1h-copy'>{tasks[i]}</label>
-                            </div>
+                            <Task 
+                                reactKey={index} 
+                                task={tasks[index]} 
+                                taskClick={ taskClick }
+                            />
                         )
                     })
                 }

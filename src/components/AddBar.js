@@ -2,8 +2,7 @@ import React from 'react';
 
 const AddBar = ({ clearValue, addSubmit }) => {
     return (
-        <div>
-            <form onSubmit={ addSubmit }>
+            <form className='center' onSubmit={ addSubmit }>
                 <input
                     className=''
                     type='text'
@@ -16,7 +15,6 @@ const AddBar = ({ clearValue, addSubmit }) => {
                     value='Add'
                 />
             </form>
-        </div>
     );
 }
 
