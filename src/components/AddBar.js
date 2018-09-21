@@ -1,20 +1,21 @@
 import React from 'react';
 
-const AddBar = ({ clearValue, addSubmit }) => {
+const AddBar = ({ addSubmit }) => {
     return (
-            <form className='center' onSubmit={ addSubmit }>
-                <input
-                    className=''
-                    type='text'
-                    name='task'
-                    placeholder='Enter new task'
-                />
-                <input
-                    className=''
-                    type='submit'
-                    value='Add'
-                />
-            </form>
+        <form className='' onSubmit={addSubmit}>
+            <input
+                className=''
+                type='submit'
+                value='Add'
+            />
+            <input
+                className='mr2 bb b--solid b--silver bw1 bt-0 br-0 bl-0'
+                style={{ background: 'transparent' }}
+                type='text'
+                name='task'
+                placeholder='Enter new task'
+            />
+        </form>
     );
 }
 

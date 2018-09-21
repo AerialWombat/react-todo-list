@@ -1,11 +1,13 @@
 import React from 'react';
 import Task from './Task';
+// import './TaskList.css'
 
 const TaskList = ({ taskClick, tasks }) => {
     return (
-        <form className='pa4 center measure'>
-            <fieldset id='Tasks' className='bn'>
-                <legend class='fw7 mb2'>Todo-List</legend>
+        <div className='flex flex-column items-center'>
+        <h1>Todo-List</h1>
+        <form className='pa1 center measure mw7'>
+            <fieldset id='Tasks' className='bn w5'>
                 {
                     tasks.map((task, index) => {
                         return (
@@ -19,6 +21,7 @@ const TaskList = ({ taskClick, tasks }) => {
                 }
             </fieldset>
         </form>
+        </div>
     )
 }
 
