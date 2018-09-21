@@ -23,7 +23,10 @@ class App extends Component {
   }
 
   onTaskClick = (event) => {
-    console.log(event.target.getAttribute('data-key'));
+    const tasksBuffer = this.state.tasks.slice();
+    tasksBuffer.splice(event.target.getAttribute('data-key'), 1);
+    this.setState({ tasks: tasksBuffer });
+    console.log(this.tasks);
   } 
 
   render() {
