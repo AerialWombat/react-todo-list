@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -49,6 +51,16 @@ table {
 
 /*
   ========================================
+  Font Styles
+  ========================================
+*/
+
+body {
+  font-family: 'Montserrat', sans-serif
+}
+
+/*
+  ========================================
   Icon Styles
   ========================================
 */
@@ -57,10 +69,7 @@ table {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+  src: local('Material Icons'), url(MaterialIcons-Regular.woff) format('woff');
 }
 
 .material-icons {
@@ -99,6 +108,5 @@ body, html {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
   background: linear-gradient(to top,  rgba(238,147,35,1) 0%, rgba(255,194,120,1) 100%);
 }
