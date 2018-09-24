@@ -5,8 +5,8 @@ import Task from './Task';
 const TaskList = ({ taskClick, tasks }) => {
     return (
         <div className='flex flex-column items-center'>
-        <h1>Todo-List</h1>
-        <form className='pa1 center measure mw7'>
+        <h1 style={{ fontWeight: '700' }}>Todo-List</h1>
+        <form className='pa2 center measure mw7' style={{ overFlowX: 'hidden', overflowY: 'auto', height: '75vh' }}>
             <fieldset id='Tasks' className='bn w5'>
                 {
                     tasks.map((task, index) => {
